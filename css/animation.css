@@ -1,0 +1,436 @@
+/*定义2个方向的动画*/
+.pt-page-moveToTop {
+	-webkit-animation: moveToTop .6s ease both;
+	animation: moveToTop .6s ease both;
+}
+
+.pt-page-moveFromTop {
+	-webkit-animation: moveFromTop .6s ease both;
+	animation: moveFromTop .6s ease both;
+}
+
+.pt-page-moveToBottom {
+	-webkit-animation: moveToBottom .6s ease both;
+	animation: moveToBottom .6s ease both;
+}
+
+.pt-page-moveFromBottom {
+	-webkit-animation: moveFromBottom .6s ease both;
+	animation: moveFromBottom .6s ease both;
+}
+/*定义2个方向动画的实现过程*/
+
+
+@-webkit-keyframes moveToTop {
+	from { }
+	to { -webkit-transform: translateY(-100%); }
+}
+@keyframes moveToTop {
+	from { }
+	to { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+
+@-webkit-keyframes moveFromTop {
+	from { -webkit-transform: translateY(-100%); }
+}
+@keyframes moveFromTop {
+	from { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+
+@-webkit-keyframes moveToBottom {
+	from { }
+	to { -webkit-transform: translateY(100%); }
+}
+@keyframes moveToBottom {
+	from { }
+	to { -webkit-transform: translateY(100%); transform: translateY(100%); }
+}
+
+@-webkit-keyframes moveFromBottom {
+	from { -webkit-transform: translateY(100%); }
+}
+@keyframes moveFromBottom {
+	from { -webkit-transform: translateY(100%); transform: translateY(100%); }
+}
+
+
+/*iconUp*/
+.pt-page-moveIconUp {
+	animation: moveIconUp ease 1.5s both infinite;
+}
+
+
+@keyframes moveIconUp {
+	0% { -webkit-transform: translateY(100%); transform: translateY(100%); opacity:0;}
+	50% { -webkit-transform: translateY(0%); transform: translateY(0%); opacity:1;}
+	100% { -webkit-transform: translateY(-100%); transform: translateY(-100%); opacity:0;}
+}
+
+/*moveCircle*/
+.pt-page-moveCircle{
+	animation: moveCircle 1.2s ease-in-out;
+}
+
+@-webkit-keyframes moveCircle{
+	0%{transform: translateY(-80%);opacity: 0.1;}
+	5%{transform: translateY(-80%);opacity: 0.3;}
+	35%{transform: translateY(10%);opacity: 0.8;}
+	60%{transform: translateY(-30%);opacity: 0.8;}
+	65%{transform: translateY(-20%);opacity: 0.8;}
+	100%{transform: translateY(0%);opacity: 1;}
+}
+/*scaleUp*/
+.pt-page-scaleUp{
+	animation:scaleUp 0.6s ease;
+}
+
+@-webkit-keyframes scaleUp{
+	from{transform: scale(0.4);}
+	to{}
+}
+/*flipInLeft*/
+.pt-page-flipInLeft{
+	transform-origin: 50% 50%;
+	animation: flipInLeft .5s both ease-out;
+}
+@-webkit-keyframes flipInLeft{
+	from { -webkit-transform:rotateY(-90deg); opacity: 0.2; }
+}
+
+
+/*page-1*/
+/*弹力效果*/
+.img-scale {
+	animation: img-scale .6s ease both;
+}
+.img-scaleRotate1{
+	animation: img-scale .4s .6s ease both;
+}
+.img-scaleRotate2{
+	animation: img-scale .4s .8s ease both;
+}
+@keyframes img-scale {
+	0% {opacity:0;-webkit-transform:scale(.3);-ms-transform:scale(.3);transform:scale(.3)}
+	50% {opacity:1;-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
+	70% {opacity:1;-webkit-transform:scale(.9);-ms-transform:scale(.9);transform:scale(.9)}
+	100% {opacity:1;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+}
+/*灯火效果*/
+.img-opacity {
+	animation: img-opacity 1.2s infinite
+}
+@keyframes img-opacity {
+	0% {opacity: 0.5;}
+	50% {opacity: 1;}
+	100% {opacity: 0.5;}
+}
+/*圆环动画*/
+.infiniteRotateOut {
+	animation: infiniteRotateOut 10s linear  infinite;
+}
+@keyframes infiniteRotateOut {
+	from{ transform: rotate(0)}
+	to {transform: rotate(360deg)}
+}
+.infiniteRotateIn {
+	animation: infiniteRotateIn 10s linear alternate infinite;
+}
+@keyframes infiniteRotateIn {
+	0%{transform: rotate(0) }
+	33.33% {transform: rotate(-90deg);}
+	66.66% {transform: rotate(0deg);}
+	100% {transform: rotate(90deg);}
+}
+.lineRotate1 {
+	animation: lineRotate1 .6s .6s ease both;
+}
+@keyframes lineRotate1 {
+	from { transform: rotate(-60deg) }
+	to{ ; }
+}
+.lineRotate2 {
+	animation: lineRotate2 .6s .6s ease both;
+}
+@keyframes lineRotate2 {
+	from { transform: rotate(120deg) }
+	to{ ; }
+}
+
+/*page-2*/
+/*图片2D旋转*/
+.img-rotate {
+	animation: img-rotate .6s ease both;
+}
+@keyframes img-rotate {
+	from {  }
+	to{ transform: rotate(360deg); }
+}
+
+.img-moveFromTop1 {
+	animation: img-moveFromTop1 .6s .3s ease both;
+}
+@keyframes img-moveFromTop1 {
+	from {transform: translateY(-30%); opacity: 0;}
+	to { transform: translateY(0); opacity: 1;}
+}
+
+.img-moveFromTop {
+	animation: img-moveFromTop .6s .7s ease both;
+}
+@keyframes img-moveFromTop {
+	from {transform: translateY(-30%); opacity: 0;}
+	to { transform: translateY(0); opacity: 1;}
+}
+
+.img-moveFromBottom1 {
+	animation: img-moveFromBottom1 .6s 1s ease both;
+}
+@keyframes img-moveFromBottom1 {
+	from {transform: translateY(30%); opacity: 0; scale(.2)}
+	to { transform: translateY(0); opacity: 1; scale(1)}
+}
+.img-moveFromBottom {
+	animation: img-moveFromBottom .6s ease both;
+}
+@keyframes img-moveFromBottom {
+	from {transform: translateY(30%); opacity: 0;}
+	to { transform: translateY(0); opacity: 1;}
+}
+
+.img-moveFromLeft {
+	animation: img-moveFromLeft .4s .4s ease both;
+}
+@keyframes img-moveFromLeft {
+	from {transform: translateX(-50%); opacity: 0;}
+	to { transform: translateX(0); opacity: 1;}
+}
+
+.img-moveFromRight {
+	animation: img-moveFromRight .4s .4s ease both;
+}
+@keyframes img-moveFromRight {
+	from {transform: translateX(50%); opacity: 0;}
+	to { transform: translateX(0); opacity: 1;}
+}
+
+/*page3*/
+/*圆动画*/
+.quanScale1 {
+	animation: quanScale1 .6s .6s ease both;
+}
+@-webkit-keyframes quanScale1 {
+	0% {opacity:0;-webkit-transform:scale(.3);-ms-transform:scale(.3);transform:scale(.3)}
+	50% {opacity:1;-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
+	70% {opacity:1;-webkit-transform:scale(.9);-ms-transform:scale(.9);transform:scale(.9)}
+	100% {opacity:1;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+}
+.quanScale2 {
+	animation: quanScale2 .5s 1s ease both;
+}
+.quanScale3 {
+	animation: quanScale2 .5s 1.5s ease both;
+}
+.quanScale4 {
+	animation: quanScale2 .5s 2s ease both;
+}
+@-webkit-keyframes quanScale2 {
+	0% {opacity:0;-webkit-transform:scale(.3);-ms-transform:scale(.3);transform:scale(.3)}
+	50% {opacity:1;-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
+	70% {opacity:1;-webkit-transform:scale(.9);-ms-transform:scale(.9);transform:scale(.9)}
+	100% {opacity:1;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+}
+/*旁边字幕动画*/
+.img-moveFromLeft3{
+	animation: img-moveFromLeft .5s 1.9s ease both;
+}
+.img-moveFromLeft4{
+	animation: img-moveFromLeft .5s 1s ease both;
+}
+.img-moveFromRight3{
+	animation: img-moveFromRight .5s 1.5s ease both;
+}
+
+/*page4*/
+
+.eq-moveFromBottom1 {
+	animation: img-moveFromBottom2 .6s 1s ease both;
+}
+.eq-moveFromBottom2 {
+	animation: img-moveFromBottom2 .6s 1.2s ease both;
+}
+.eq-moveFromBottom3 {
+	animation: img-moveFromBottom2 .6s 1.4s ease both;
+}
+
+
+/*从隐藏到显示动画*/
+.img-opacity2 {
+	animation: img-opacity2 2s
+}
+.img-opacity3 {
+	animation: img-opacity2 3.6s
+}
+.img-opacity4 {
+	animation: img-opacity2 4.2s
+}
+.img-opacity5 {
+	animation: img-opacity2 4.6s
+}
+@keyframes img-opacity2 {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+
+
+/*page5*/
+
+.img-moveFromTop2 {
+	animation: img-moveFromTop .6s ease both;
+}
+.img-moveFromBottom3 {
+	animation: img-moveFromBottom .6s .3s ease both;
+}
+
+/*齿轮动画顺时针*/
+.wheelRotateOrder{
+	animation: wheelRotateOrder 10s linear  infinite;
+}
+@keyframes wheelRotateOrder{
+	from{}
+	to{transform: rotate(360deg);}
+}
+/*齿轮动画逆时针*/
+.wheelRotate1{
+	animation: wheelRotate 5s linear  infinite;
+}
+.wheelRotate2{
+	animation: wheelRotate 10s linear  infinite;
+}
+@keyframes wheelRotate{
+	from{}
+	to{transform: rotate(-360deg);}
+}
+
+/*不规则Show*/
+.delayShow3{
+	animation: delayShow .5s 1.1s ease both;
+}
+.delayShow4{
+	animation: delayShow .5s 1.2s ease both;
+}
+.delayShow5{
+	animation: delayShow .5s 1.3s ease both;
+}
+.delayShow6{
+	animation: delayShow .5s 1.4s ease both;
+}
+.delayShow7{
+	animation: delayShow .5s 1.5s ease both;
+}
+.delayShow8{
+	animation: delayShow .5s 1.6s ease both;
+}
+.delayShow9{
+	animation: delayShow .5s 1.7s ease both;
+}
+.delayShow10{
+	animation: delayShow .5s 2.4s ease both;
+}
+.delayShow11{
+	animation: delayShow .5s 2.3s ease both;
+}
+.delayShow12{
+	animation: delayShow .5s 2.2s ease both;
+}
+.delayShow13{
+	animation: delayShow .5s 2.1s ease both;
+}
+.delayShow14{
+	animation: delayShow .5s 2s ease both;
+}
+.delayShow15{
+	animation: delayShow .5s 1.9s ease both;
+}
+.delayShow16{
+	animation: delayShow .5s 1.8s ease both;
+}
+@keyframes delayShow {
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+.publicScale {
+	animation: quanScale2 .5s 2.2s ease both;
+}
+
+/*page6*/
+/*掉落动画*/
+.dropOut-1 {
+	animation: dropOut .3s .7s ease both;
+}
+.dropOut-2 {
+	animation: dropOut .3s .8s ease both;
+}
+.dropOut-3 {
+	animation: dropOut .3s .9s ease both;
+}
+@keyframes dropOut {
+	from {transform: translateY(-200%)}
+	to { transform: translateY(0)}
+}
+/*闪光缩放*/
+.scaleDropOut {
+	animation: img-scaleRing .5s 1.1s ease both;
+}
+
+
+/*page-7*/
+.img-moveFromLeft2 {
+	animation: img-moveFromLeft2 .3s 1.9s ease both;
+}
+@keyframes img-moveFromLeft2 {
+	from {transform: translateX(-50%); opacity: 0;}
+	to { transform: translateX(0); opacity: 1;}
+}
+
+.img-moveFromRight2 {
+	animation: img-moveFromRight2 .3s 2.1s ease both;
+}
+@keyframes img-moveFromRight2 {
+	from {transform: translateX(50%); opacity: 0;}
+	to { transform: translateX(0); opacity: 1;}
+}
+.img-moveFromBottom2 {
+	animation: img-moveFromBottom2 .3s 1.6s ease both;
+}
+@keyframes img-moveFromBottom2 {
+	from {transform: translateY(30%); opacity: 0; scale(.2)}
+	to { transform: translateY(0); opacity: 1; scale(1)}
+}
+.infiniteRotate {
+	animation: infiniteRotate 10s linear  infinite;
+}
+@keyframes infiniteRotate {
+	from{ transform: rotate(0)}
+	to {transform: rotate(-360deg)}
+}
+/*圆环缩放动画*/
+.img-scaleRing1 {
+	animation: img-scaleRing .5s 1.1s ease both;
+}
+.img-scaleRing2 {
+	animation: img-scaleRing .5s 1.4s ease both;
+}
+.img-scaleRing3{
+	animation: img-scaleRing .5s 1.7s ease both;
+}
+@keyframes img-scaleRing {
+	0% {opacity:0;-webkit-transform:scale(.3);-ms-transform:scale(.3);transform:scale(.3)}
+	50% {opacity:1;-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
+	70% {opacity:1;-webkit-transform:scale(.9);-ms-transform:scale(.9);transform:scale(.9)}
+	100% {opacity:1;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+}
+
+
+

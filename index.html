@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"  content="width=device-width,initial-scale=1.0,user-scalable=no" />
+	<title>纯原生JS写的营销案例</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="css/animation.css"/>
+</head>
+<body>
+<div id='container' class="container">
+	<div class='page page-1  ' >
+		<img class='page-1-1 pt-page-moveFromTop ' src="images/1/bg_01.jpg" />
+		<img class='page-1-2 pt-page-moveFromBottom' src="images/1/bg_02.jpg" />
+		<img class='page-1-3 img-scale' src="images/1/bt.png" />
+		<img class='page-1-4 img-opacity' src="images/1/dianzhui.png" />
+		<img class='page-1-5 img-moveFromLeft' src="images/1/line_01.png" />
+		<img class='page-1-6 img-moveFromRight' src="images/1/line_02.png" />
+		<div class="page-1-7 img-scaleRotate1"><img class='infiniteRotateIn' src="images/1/quan_nei.png" /></div>
+		<div class="page-1-8 img-scaleRotate2"><img class='infiniteRotateOut' src="images/1/quan_wai.png" /></div>
+		<img class='page-1-9 img-moveFromTop1' src="images/1/time.png" />
+		<img class='page-1-10 lineRotate2' src="images/1/xian.png" />
+		<img class='page-1-11 lineRotate1' src="images/1/xian.png" />
+	</div>
+	<div class='page page-2 hide'>
+		<img class='page-2-1 img-rotate' src="images/2/bt.png" />
+		<img class='page-2-2 img-moveFromTop1' src="images/2/bt_02.png" />
+		<img class='page-2-3 img-moveFromTop' src="images/2/png_04.png" />
+		<img class='page-2-4 img-moveFromBottom' src="images/2/png_01.png" />
+		<img class='page-2-5 img-moveFromLeft' src="images/2/png_02.png" />
+		<img class='page-2-6 img-moveFromRight' src="images/2/png_03.png" />
+		<img class='page-2-7 img-moveFromBottom1' src="images/2/png_05.png" />
+		<img class='page-2-8 img-moveFromBottom1' src="images/2/png_06.png" />
+	</div>
+	<div class='page page-3 hide'>
+		<img class='page-3-1 img-scale' src="images/3/bt.png" />
+		<img class='page-3-2 quanScale1' src="images/3/quan_01.png" />
+		<img class='page-3-3 quanScale2' src="images/3/quan_02.png" />
+		<img class='page-3-4 quanScale3' src="images/3/quan_03.png" />
+		<img class='page-3-5 quanScale4' src="images/3/quan_04.png" />
+		<img class='page-3-6 img-moveFromLeft3' src="images/3/txt_01.png" />
+		<img class='page-3-7 img-moveFromRight3' src="images/3/txt_02.png" />
+		<img class='page-3-8 img-moveFromLeft4' src="images/3/txt_03.png" />
+	</div>
+	<div class='page page-4 hide'>
+		<img class='page-4-1 img-rotate' src="images/4/bt.png" />
+		<img class='page-4-2 img-moveFromBottom' src="images/4/bt_01.png" />
+		<div class="page-4-3 img-opacity2"><img class=' infiniteRotateOut' src="images/4/quan.png" /></div>
+		<img class='page-4-4 eq-moveFromBottom1' src="images/4/png_00.png" />
+		<img class='page-4-5 eq-moveFromBottom3' src="images/4/png_02.png" />
+		<img class='page-4-6 eq-moveFromBottom2' src="images/4/png_01.png" />
+		<img class='page-4-7 img-opacity3' src="images/4/dian_01.png" />
+		<img class='page-4-8 img-opacity4' src="images/4/dian_02.png" />
+		<img class='page-4-9 img-opacity5' src="images/4/dian_03.png" />
+	</div>
+
+	<div class='page page-5 hide '>
+		<img class="page-5-1 img-moveFromTop2" src="images/5/bt.png" />
+		<img class="page-5-2 img-moveFromBottom3" src="images/5/txt_01.png" />
+		
+		<div class="page-5-3 delayShow3"><img class="wheelRotate1" src="images/5/q_02.png" /></div>
+		<div class="page-5-4 delayShow4"><img class="wheelRotateOrder" src="images/5/q_01.png" /></div>
+		<div class="page-5-5 delayShow5"><img class="wheelRotate2" src="images/5/q_02.png" /></div>
+		<div class="page-5-6 delayShow6"><img class="wheelRotateOrder" src="images/5/q_04.png" /></div>
+		<div class="page-5-7 delayShow7"><img class="wheelRotate1" src="images/5/q_01.png" /></div>
+		<div class="page-5-8 delayShow8"><img class="wheelRotateOrder" src="images/5/q_03.png" /></div>
+		<div class="page-5-9 delayShow9"><img class="wheelRotate2" src="images/5/q_02.png" /></div>
+		
+		<div class="page-5-10 delayShow10"><img class="wheelRotate1"  src="images/5/q_02.png" /></div>
+		<div class="page-5-11 delayShow11"><img class="wheelRotateOrder" src="images/5/q_01.png" /></div>
+		<div class="page-5-12 delayShow12"><img class="wheelRotate2" src="images/5/q_02.png" /></div>
+		<div class="page-5-13 delayShow13"><img class="wheelRotateOrder" src="images/5/q_04.png" /></div>
+		<div class="page-5-14 delayShow14"><img class="wheelRotate1" src="images/5/q_01.png" /></div>
+		<div class="page-5-15 delayShow15"><img class="wheelRotateOrder" src="images/5/q_03.png" /></div>
+		<div class="page-5-16 delayShow16"><img class="wheelRotate2" src="images/5/q_02.png" /></div>
+		
+		<img class="page-5-17 publicScale" src="images/5/biao.png" />
+	</div>
+	<div class='page page-6 hide'>
+		<img class="page-6-1 img-scale" src="images/6/bt.png" />
+		<img class="page-6-2 scaleDropOut" src="images/6/png_04.png" />
+		<img class="page-6-3 dropOut-2" src="images/6/png_02.png" />
+		<img class="page-6-4 dropOut-3" src="images/6/png_03.png" />		
+		<img class="page-6-5 dropOut-1" src="images/6/png_01.png" />
+	</div>
+	<div class='page page-7 hide'>
+		<img class="page-7-1 img-moveFromBottom" src="images/7/bt.png" />
+		<img class="page-7-2 img-moveFromBottom2" src="images/7/png_01.png"/>
+		<img class="page-7-3 img-moveFromLeft2" src="images/7/png_02.png" />
+		<img class="page-7-4 img-moveFromRight2" src="images/7/png_03.png" />
+		<div class="page-7-5 img-scaleRing1"><img class=" infiniteRotateOut" src="images/7/quan.png" /></div>
+		<div class="page-7-6 img-scaleRing2"><img class="infiniteRotateOut" src="images/7/quan.png" /></div>
+		<div class="page-7-7 img-scaleRing3"><img class="infiniteRotate" src="images/7/quan.png" /></div>
+	</div>
+	
+	<div class="point pt-page-moveIconUp">
+		<img src="images/icon_up.png" alt="">
+	</div>
+	<div class="music">
+		<audio class="hide" src="01.mp3" loop  autoplay="true"></audio>
+		<img class="music-img ro infiniteRotateOut" src="./images/music.png">
+		<div class="music-p">
+			<img src="./images/music.gif">
+		</div>
+	</div>
+</div>
+
+</body>
+
+<script src="js/tools.js"></script>
+<script src="js/index.js"></script>
+
+
+
+</html>
