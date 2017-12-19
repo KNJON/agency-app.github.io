@@ -16,7 +16,7 @@ window.onload=function(){
 	//	音频控制
 	musicPlay ()
 	function musicPlay (){
-		var isShow = true
+		var isShow = false
 		var isClick = document.querySelector('.music')
 		var musicImg = document.querySelector('.music-img')
 		var musicP = document.querySelector('.music-p img')
