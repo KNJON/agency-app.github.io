@@ -12,31 +12,40 @@ window.onload=function(){
     var isUp = false;
     var isDown= false;
     
-    
+	
+    var isAutoPlay = 1;
+    document.querySelector('html').onclick('touchstart',function(){
+    	if(isAutoPlay===1){
+	     var audio = document.querySelector('.music audio')
+	     audio.play();
+	     isAutoPlay = 2
+	}
+    }
 	//	音频控制
 	musicPlay ()
 	function musicPlay (){
-		var isShow = false
+		var isShow = true
 		var isClick = document.querySelector('.music')
 		var musicImg = document.querySelector('.music-img')
 		var musicP = document.querySelector('.music-p img')
 		var audio = document.querySelector('.music audio')
-		
+
 		isClick.addEventListener('click',function(ev){
-	        if(isShow){
-	        	audio.pause();
-	        	tools.removeClass(musicImg,'infiniteRotateOut');
-	        	tools.addClass(musicP,'hide');
-	        	isShow = !isShow
-	        }else{
-	        	tools.addClass(musicImg,'infiniteRotateOut');
-	        	tools.removeClass(musicP,'hide');
-	        	audio.play();
-	        	isShow = !isShow
-	        }
+		if(isShow){
+			audio.pause();
+			tools.removeClass(musicImg,'infiniteRotateOut');
+			tools.addClass(musicP,'hide');
+			isShow = !isShow
+		}else{
+			tools.addClass(musicImg,'infiniteRotateOut');
+			tools.removeClass(musicP,'hide');
+			audio.play();
+			isShow = !isShow
+		}
 	    });
 	} 
-	
+
+    
 	//	滑屏控制
     var isMoving = false;
     var isBottom = false
