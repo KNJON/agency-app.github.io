@@ -12,15 +12,7 @@ window.onload=function(){
     var isUp = false;
     var isDown= false;
     
-	
-    var isAutoPlay = 1;
-    document.querySelector('html').onclick('touchstart',function(){
-    	if(isAutoPlay===1){
-	     var audio = document.querySelector('.music audio')
-	     audio.play();
-	     isAutoPlay = 2
-	}
-    }
+
 	//	音频控制
 	musicPlay ()
 	function musicPlay (){
